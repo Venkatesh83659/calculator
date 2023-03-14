@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Document</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap" rel="stylesheet">
+     <style>
+        body{
+            width:100vw;
+            height:100vh;
+            background-image: linear-gradient(black,rgb(202, 50, 156));
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #container{
+            width:400px;
+            height:500px;
+            /* background-color: rgb(124, 169, 169); */
+            border-radius:0px 20px 20px 0px;
+            box-shadow: 10px 10px 10px black,-2px -2px 10px black;
+            z-index:3 ;
+        }
+        #scr{
+            width:350px;
+            height:60px;
+            margin-top: 20px;
+            margin-left: 20px;
+            background-color: rgb(93, 21, 100);
+            border-radius: 10px;
+            box-shadow: 10px 10px 10px black;
+        }
+        input{
+            width:70px;
+            height:60px;
+            margin-left: 20px;
+            color: rgb(244, 8, 173);
+            border-radius: 8px;
+            font-size: 35px;
+            box-shadow: 5px 5px 0px black;
+            background-color: transparent;
+        }
+        input:hover{
+            background-color:  rgb(214, 26, 158);
+            color:black;
+        }
+        .a{
+            width:160px;
+            height:60px;
+        }
+        #text{
+            width:100vw;
+            height:100vh;
+            position: absolute;
+            font-size: 65px;
+            color:rgba(255, 255, 255, 0.651);
+        }
+        h1{
+            position: absolute;
+            margin-top: 300px;
+            margin-left: 300px;
+        }
+        #c{
+            font-family: 'Open Sans', sans-serif;
+        }
+        #d{
+            font-family: 'Tilt Prism', cursive;
+        }
+     </style>
+</head>
+<body>
+    <div id="text">
+        <h1><span id="c">calc</span><span id="d">ulator</span></h1>
+    </div>
+    <div id="container">
+        <form name="calc">
+            <input id="scr" name="ans">
+            <br><br>
+            <input type="button" value="1" onclick="calc.ans.value +='1'">
+            <input type="button" value="2" onclick="calc.ans.value +='2'">
+            <input type="button" value="3" onclick="calc.ans.value +='3'">
+            <input type="button" value="+" onclick="calc.ans.value +='+'">
+            <br><br>
+            <input type="button" value="4" onclick="calc.ans.value +='4'">
+            <input type="button" value="5" onclick="calc.ans.value +='5'">
+            <input type="button" value="6" onclick="calc.ans.value +='6'">
+            <input type="button" value="-" onclick="calc.ans.value +='-'">
+            <br><br>
+            <input type="button" value="7" onclick="calc.ans.value +='7'">
+            <input type="button" value="8" onclick="calc.ans.value +='8'">
+            <input type="button" value="9" onclick="calc.ans.value +='9'">
+            <input type="button" value="*" onclick="calc.ans.value +='*'">
+            <br><br>
+            <input type="button" value="/" onclick="calc.ans.value +='/'">
+            <input type="button" value="0" onclick="calc.ans.value +='0'">
+            <input type="button" value="." onclick="calc.ans.value +='.'">
+            <input type="button" value="%" onclick="calc.ans.value +='%'">
+            <br><br>
+            <input class="a" type="button" value="=" onclick="calc.ans.value = eval(calc.ans.value)">
+            <input class="a" type="button" value="clear" onclick="calc.ans.value =''">
+        </form>
+    </div>
+    
+</body>
+</html>
